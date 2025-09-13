@@ -10,7 +10,7 @@ function AddAboutPage() {
   useEffect(() => {
     const fetchAboutInfo = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         if (response.data) {
           setDescription(response.data.description || '');
         }
@@ -31,7 +31,7 @@ function AddAboutPage() {
     }
 
     try {
-      await axios.post('https://bible-mining-backend.onrender.com', formData, {
+      await axios.post('', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

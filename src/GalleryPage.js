@@ -17,7 +17,7 @@ function GalleryPage() {
   useEffect(() => {
     const fetchGalleryItems = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         setGalleryItems(response.data.galleryItems);
         setCategories(['All', ...new Set(response.data.categories)]);
         setLoading(false);

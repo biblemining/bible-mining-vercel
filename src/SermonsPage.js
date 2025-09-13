@@ -17,7 +17,7 @@ function SermonsPage() {
   useEffect(() => {
     const fetchSermons = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         setSermons(response.data.sermons);
         setAuthors(['All', ...new Set(response.data.authors)]);
         setCategories(['All', ...new Set(response.data.categories)]);

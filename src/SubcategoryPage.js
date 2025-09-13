@@ -14,7 +14,7 @@ function SubcategoryPage() {
   useEffect(() => {
     const fetchSubcategories = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         const allItems = response.data.galleryItems;
         const filteredItems = allItems.filter(item => item.main_category === decodedMainCategory);
         const uniqueSubcategories = [...new Set(filteredItems.map(item => item.subcategory))];

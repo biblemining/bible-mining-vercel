@@ -12,7 +12,7 @@ function AddBlogPage() {
     const newPost = { title, content };
 
     try {
-      await axios.post('https://bible-mining-backend.onrender.com', newPost);
+      await axios.post('', newPost);
       setMessage('పోస్ట్ విజయవంతంగా జోడించబడింది!');
       setTitle('');
       setContent('');

@@ -22,22 +22,22 @@ function HomePage() {
   useEffect(() => {
     const fetchHomepageData = async () => {
       try {
-        const bgResponse = await axios.get('https://bible-mining-backend.onrender.com');
+        const bgResponse = await axios.get('');
         if (bgResponse.data.image_url) {
           setBackgroundImage(bgResponse.data.image_url);
         }
-        const aboutResponse = await axios.get('https://bible-mining-backend.onrender.com');
+        const aboutResponse = await axios.get('');
         if (aboutResponse.data) {
           setAboutInfo(aboutResponse.data);
         }
 
-        const songResponse = await axios.get('https://bible-mining-backend.onrender.com');
+        const songResponse = await axios.get('');
         setLatestSong(songResponse.data);
         
-        const videoResponse = await axios.get('https://bible-mining-backend.onrender.com');
+        const videoResponse = await axios.get('');
         setLatestVideo(videoResponse.data);
         
-        const photoResponse = await axios.get('https://bible-mining-backend.onrender.com');
+        const photoResponse = await axios.get('');
         setLatestPhoto(photoResponse.data);
 
       } catch (error) {

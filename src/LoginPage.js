@@ -12,7 +12,7 @@ function LoginPage({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://bible-mining-backend.onrender.com', { username, password });
+      const response = await axios.post('', { username, password });
       if (response.data.success) {
         localStorage.setItem('isAuthenticated', 'true'); // లాగిన్ అయినట్లు గుర్తుంచుకోవడానికి
         onLogin(true);

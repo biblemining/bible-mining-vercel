@@ -13,7 +13,7 @@ function AddHomepageBackground() {
     formData.append('background_image', backgroundImage);
 
     try {
-      await axios.post('https://bible-mining-backend.onrender.com', formData, {
+      await axios.post('', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

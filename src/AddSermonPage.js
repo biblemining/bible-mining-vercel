@@ -17,7 +17,7 @@ function AddSermonPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         const uniqueAuthors = ['All', ...new Set(response.data.sermons.map(sermon => sermon.author))];
         const uniqueCategories = ['All', ...new Set(response.data.sermons.map(sermon => sermon.category))];
         setAuthors(uniqueAuthors);
@@ -48,7 +48,7 @@ function AddSermonPage() {
     formData.append('pdf', pdfFile);
 
     try {
-      await axios.post('https://bible-mining-backend.onrender.com', formData, {
+      await axios.post('', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -62,7 +62,7 @@ function AddSermonPage() {
       setDescription('');
       setPdfFile(null);
       document.getElementById('pdf-input').value = '';
-      const response = await axios.get('https://bible-mining-backend.onrender.com');
+      const response = await axios.get('');
       const uniqueAuthors = ['All', ...new Set(response.data.sermons.map(sermon => sermon.author))];
       const uniqueCategories = ['All', ...new Set(response.data.sermons.map(sermon => sermon.category))];
       setAuthors(uniqueAuthors);

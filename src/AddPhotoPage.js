@@ -14,7 +14,7 @@ function AddPhotoPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         setCategories(['All', ...new Set(response.data.categories)]);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -40,7 +40,7 @@ function AddPhotoPage() {
     formData.append('photo', photoFile);
 
     try {
-      await axios.post('https://bible-mining-backend.onrender.com', formData, {
+      await axios.post('', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -52,7 +52,7 @@ function AddPhotoPage() {
       setCategory('');
       setNewCategory('');
       document.getElementById('photo-input').value = '';
-      const response = await axios.get('https://bible-mining-backend.onrender.com');
+      const response = await axios.get('');
       setCategories(['All', ...new Set(response.data.categories)]);
     } catch (error) {
       setMessage('ఫోటోను జోడించడంలో లోపం సంభవించింది.');

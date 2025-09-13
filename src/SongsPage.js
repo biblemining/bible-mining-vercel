@@ -18,7 +18,7 @@ function SongsPage() {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const response = await axios.get('https://bible-mining-backend.onrender.com');
+        const response = await axios.get('');
         setSongs(response.data.songs);
         setSingers(['All', ...new Set(response.data.songs.map(song => song.singer))]);
         setCategories(['All', ...new Set(response.data.songs.map(song => song.category))]);
