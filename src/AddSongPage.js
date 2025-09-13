@@ -18,7 +18,7 @@ function AddSongPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/songs');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         const uniqueSingers = ['All', ...new Set(response.data.songs.map(song => song.singer))];
         const uniqueCategories = ['All', ...new Set(response.data.songs.map(song => song.category))];
         setSingers(uniqueSingers);
@@ -50,7 +50,7 @@ function AddSongPage() {
     formData.append('audio', audioFile);
 
     try {
-      await axios.post('http://localhost:5000/api/songs', formData, {
+      await axios.post('https://bible-mining-backend.onrender.com', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -65,7 +65,7 @@ function AddSongPage() {
       setNewCategory('');
       setOrder('');
       document.getElementById('audio-input').value = '';
-      const response = await axios.get('http://localhost:5000/api/songs');
+      const response = await axios.get('https://bible-mining-backend.onrender.com');
       const uniqueSingers = ['All', ...new Set(response.data.songs.map(song => song.singer))];
       const uniqueCategories = ['All', ...new Set(response.data.songs.map(song => song.category))];
       setSingers(uniqueSingers);

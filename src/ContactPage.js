@@ -15,7 +15,7 @@ function ContactPage() {
   useEffect(() => {
     const fetchContactInfo = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/contact');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         setContactInfo(response.data);
         setLoading(false);
       } catch (err) {
@@ -31,7 +31,7 @@ function ContactPage() {
     e.preventDefault();
     const formData = { name, email, mobile, message };
     try {
-      await axios.post('http://localhost:5000/api/contact/send-email', formData);
+      await axios.post('https://bible-mining-backend.onrender.com/send-email', formData);
       setFormMessage('మీ సందేశం విజయవంతంగా పంపబడింది!');
       setName('');
       setEmail('');

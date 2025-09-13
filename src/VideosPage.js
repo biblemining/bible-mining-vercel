@@ -27,7 +27,7 @@ function VideosPage() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/videos');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         setVideos(response.data.videos);
         setAuthors(['All', ...new Set(response.data.authors)]);
         setCategories(['All', ...new Set(response.data.categories)]);

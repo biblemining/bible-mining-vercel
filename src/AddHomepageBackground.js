@@ -13,7 +13,7 @@ function AddHomepageBackground() {
     formData.append('background_image', backgroundImage);
 
     try {
-      await axios.post('http://localhost:5000/api/homepage', formData, {
+      await axios.post('https://bible-mining-backend.onrender.com', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

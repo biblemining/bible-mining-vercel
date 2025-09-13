@@ -11,7 +11,7 @@ function Header() {
   useEffect(() => {
     const fetchLogo = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/logo');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         if (response.data.image_url) {
           setLogo(response.data.image_url);
         }

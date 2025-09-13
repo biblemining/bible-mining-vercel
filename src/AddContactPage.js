@@ -14,7 +14,7 @@ function AddContactPage() {
   useEffect(() => {
     const fetchContactInfo = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/contact');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         const info = response.data;
         if (info) {
           setAddress(info.address || '');
@@ -42,7 +42,7 @@ function AddContactPage() {
       instagram_link: instagramLink,
     };
     try {
-      await axios.post('http://localhost:5000/api/contact', contactInfo);
+      await axios.post('https://bible-mining-backend.onrender.com', contactInfo);
       setMessage('సంప్రదింపు వివరాలు విజయవంతంగా అప్‌డేట్ చేయబడ్డాయి!');
     } catch (error) {
       setMessage('సంప్రదింపు వివరాలను అప్‌డేట్ చేయడంలో లోపం సంభవించింది.');

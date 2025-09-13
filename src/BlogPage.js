@@ -10,7 +10,7 @@ function BlogPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/blog');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         setPosts(response.data);
         setLoading(false);
       } catch (err) {

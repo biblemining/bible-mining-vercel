@@ -17,7 +17,7 @@ function AddVideoPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/videos');
+        const response = await axios.get('https://bible-mining-backend.onrender.com');
         const uniqueAuthors = ['All', ...new Set(response.data.videos.map(video => video.author))];
         const uniqueCategories = ['All', ...new Set(response.data.videos.map(video => video.category))];
         setAuthors(uniqueAuthors);
@@ -49,7 +49,7 @@ function AddVideoPage() {
     };
 
     try {
-      await axios.post('http://localhost:5000/api/videos', newVideo);
+      await axios.post('https://bible-mining-backend.onrender.com', newVideo);
       setMessage('వీడియో విజయవంతంగా జోడించబడింది!');
       setTitle('');
       setAuthor('');
@@ -58,7 +58,7 @@ function AddVideoPage() {
       setNewCategory('');
       setYoutubeUrl('');
       setDescription('');
-      const response = await axios.get('http://localhost:5000/api/videos');
+      const response = await axios.get('https://bible-mining-backend.onrender.com');
       const uniqueAuthors = ['All', ...new Set(response.data.videos.map(video => video.author))];
       const uniqueCategories = ['All', ...new Set(response.data.videos.map(video => video.category))];
       setAuthors(uniqueAuthors);

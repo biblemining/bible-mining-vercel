@@ -13,7 +13,7 @@ function AddLogoPage() {
     formData.append('logo_image', logoImage);
 
     try {
-      await axios.post('http://localhost:5000/api/logo', formData, {
+      await axios.post('https://bible-mining-backend.onrender.com', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
