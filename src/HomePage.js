@@ -51,7 +51,7 @@ function HomePage() {
     <div className="homepage-main-container">
       <div className="homepage-container">
         {backgroundImage && (
-          <img src={backgroundImage} alt="Homepage Background" className="background-image" />
+          <img src={backgroundImage} alt="Homepage background image" className="background-image" />
         )}
         <div className="homepage-content">
           <h1>BIBLE MINING</h1>
@@ -125,7 +125,7 @@ function HomePage() {
       <section className="about-me-section">
         <div className="about-me-card">
           {aboutInfo.photo_url && (
-            <img src={aboutInfo.photo_url} alt="Your Photo" className="my-photo" />
+            <img src={aboutInfo.photo_url} alt="Pastor Hanok Kumar" className="my-photo" />
           )}
           <div className="about-me-info">
             <h2>నా గురించి</h2>
