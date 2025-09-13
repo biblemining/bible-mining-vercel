@@ -1,0 +1,89 @@
+.pdf-viewer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pdf-toolbar {
+  display: flex;
+  flex-wrap: wrap; /* responsive toolbar */
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pdf-toolbar button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pdf-toolbar button:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.05);
+}
+
+.pdf-toolbar button svg {
+  fill: #333;
+}
+
+.page-input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.search-container input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.pdf-document {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Highlight search (optional) */
+.react-pdf__Page__annotations.highlight {
+  background-color: #ffc107;
+  opacity: 0.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .page-input {
+    width: 50px;
+    font-size: 0.9rem;
+  }
+  .search-container input {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+  .pdf-toolbar {
+    gap: 0.5rem;
+  }
+}

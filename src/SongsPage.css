@@ -1,0 +1,137 @@
+.main-layout {
+  display: flex;
+}
+
+.songs-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.songs-content h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reset-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}
+
+.song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.song-list-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* కొత్త లేఅవుట్ కోసం మార్పులు */
+.song-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.song-info-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.song-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  min-width: 200px;
+}
+
+.song-author {
+  font-style: italic;
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.lyrics-toggle-btn {
+  background-color: #f0c13d;
+  border: none;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.lyrics-toggle-btn:hover {
+  background-color: #e2b02a;
+}
+
+.song-lyrics {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ccc;
+  text-align: left;
+}
+
+.song-lyrics p {
+  white-space: pre-wrap;
+  font-family: sans-serif;
+  color: #555;
+  line-height: 1.6;
+}
+
+.audio-player {
+  max-width: 250px;
+}
+
+.no-songs-found {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 3rem;
+  width: 100%;
+}

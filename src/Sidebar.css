@@ -1,0 +1,75 @@
+.sidebar {
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid #e0e0e0;
+  width: 280px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.category-list, .author-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.category-list li, .author-list li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  color: #555;
+}
+
+.category-list li:hover, .author-list li:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.category-list li.active, .author-list li.active {
+  background-color: #f0c13d;
+  color: #333;
+  font-weight: bold;
+}
+
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.alphabet-char {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.alphabet-char:hover {
+  background-color: #f0c13d;
+  color: #333;
+}
+
+.alphabet-char.active-alphabet {
+  background-color: #f0c13d;
+  color: #333;
+}

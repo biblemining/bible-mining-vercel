@@ -1,0 +1,86 @@
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  gap: 0.8rem;
+}
+
+.logo {
+  height: 45px;
+  border-radius: 50%;
+}
+
+.site-name {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navigation li a:hover {
+  color: #f0c13d;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+  .logo-link {
+    margin-bottom: 1rem;
+  }
+  .navigation ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+}

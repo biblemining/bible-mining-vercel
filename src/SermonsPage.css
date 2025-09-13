@@ -1,0 +1,111 @@
+.main-layout {
+  display: flex;
+}
+
+.sermons-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.sermons-content h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reset-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}
+
+.sermon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.sermon-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.sermon-card h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.sermon-category {
+  color: #999;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.sermon-description {
+  color: #333;
+  font-size: 1rem;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.pdf-link-btn {
+  display: inline-block;
+  background-color: #f0c13d;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.pdf-link-btn:hover {
+  background-color: #e2b02a;
+}
+
+.no-sermons-found {
+  font-size: 1.2rem;
+  color: #888;
+  grid-column: 1 / -1;
+  text-align: center;
+}
