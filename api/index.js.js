@@ -6,11 +6,9 @@ const path = require('path');
 const { Schema } = mongoose;
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
-  'https://biblemining.in', // మీ లైవ్ డొమైన్
-  'https://bible-mining-frontend.vercel.app', // Vercel ఇచ్చే URL
+  'https://bible-mining-vercel.vercel.app', // Vercel ఇచ్చే URL
   'http://localhost:3000'
 ];
 
